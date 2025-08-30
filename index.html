@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Laxmi Engineering Center - Medak</title>
+  <!-- Replace fonts or remove if offline -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-red:#d81b22;
+      --brand-green:#325b00;
+      --accent:#f4f8f6;
+      --text:#222;
+      --muted:#666;
+      --container:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Roboto,Montserrat,system-ui,-apple-system,Segoe UI,Arial; margin:0;color:var(--text);background:linear-gradient(90deg,#f7fdf9,#ffffff);}
+    header{background:white;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:4px solid rgba(0,0,0,0.03);position:sticky;top:0;z-index:40}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:46px}
+    .brand h1{font-size:18px;margin:0;color:var(--brand-green);letter-spacing:0.5px}
+    nav{display:flex;gap:14px;align-items:center}
+    .menu-toggle{display:none}
+    .hero{padding:28px 18px;text-align:center}
+    .hero h2{font-family:Montserrat;font-weight:700;font-size:34px;margin:8px 0}
+    .hero p{max-width:820px;margin:12px auto;color:var(--muted);line-height:1.6}
+    .card{background:white;display:inline-block;padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06);margin-top:18px;text-align:left}
+    .contact-line{margin-top:14px;font-weight:600}
+
+    .quick-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    .btn{background:var(--brand-red);color:white;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--brand-red);border:1px solid rgba(216,27,34,0.12)}
+
+    .logos{display:flex;gap:18px;align-items:center;justify-content:center;padding:20px 18px}
+    .logos img{height:60px;filter:grayscale(0);object-fit:contain}
+
+    .section{padding:32px 18px}
+    .container{max-width:var(--container);margin:0 auto}
+
+    .about{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+    .about .list{background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+    .about h3{margin:0 0 8px 0}
+    ul.items{padding-left:18px;color:var(--muted)}
+
+    footer{background:var(--brand-green);color:white;padding:18px}
+    .footer-grid{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+    .whatsapp{position:fixed;right:16px;bottom:16px;z-index:60}
+    .whatsapp a{display:block;width:64px;height:64px;border-radius:50%;background:#25D366;box-shadow:0 8px 20px rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;text-decoration:none}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .about{grid-template-columns:1fr}
+      .brand h1{font-size:16px}
+      .hero h2{font-size:28px}
+      .logos img{height:48px}
+      nav{display:none}
+      .menu-toggle{display:block}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- Replace logo.png with your shop logo file -->
+      <img src="logo.png" alt="Sri Laxmi Logo" onerror="this.style.display='none'">
+      <div>
+        <h1>SRI LAXMI ENGINEERING CENTER</h1>
+        <div style="font-size:12px;color:var(--muted)">M.G Road, Shivaji Statue, Medak - 502110</div>
+      </div>
+    </div>
+    <nav>
+      <div style="font-size:14px;color:var(--muted)">Established 1988</div>
+      <div style="font-size:14px;color:var(--muted);margin-left:8px">WhatsApp: <strong>9392079056</strong>, <strong>8919200344</strong></div>
+    </nav>
+    <button class="menu-toggle" aria-label="menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>CRI Pumps • BirlaNu Pipes • Somany Tiles</h2>
+      <p>Welcome to Sri Laxmi Engineering Center — your trusted supplier of CRI pumps, BirlaNu CPVC & PVC pipes, SWR fittings, sanitaryware, tiles, sinks and bathroom fittings in Medak since 1988.</p>
+
+      <div class="card">
+        <div style="font-weight:700">Contact & Support</div>
+        <div class="contact-line">WhatsApp: <a href="https://wa.me/91 9392079056" style="color:var(--brand-red);text-decoration:none">9392079056</a>  •  <a href="https://wa.me/91 8919200344" style="color:var(--brand-red);text-decoration:none">8919200344</a></div>
+        <div style="margin-top:10px;color:var(--muted)">Visit our shop at M.G Road, Shivaji Statue, Medak - 502110</div>
+      </div>
+
+      <div class="quick-links">
+        <a class="btn" href="#products">Our Products</a>
+        <a class="btn secondary" href="#contact">Get Quote</a>
+      </div>
+
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h3 style="font-family:Montserrat;margin-bottom:8px">Featured Brands & Products</h3>
+        <div class="logos">
+          <!-- Replace file names below with the provided images (cri.png, birla.png, somany.png) -->
+          <img src="cri.png" alt="CRI Pumps" onerror="this.style.display='none'">
+          <img src="birlanu.png" alt="BirlaNu Pipes" onerror="this.style.display='none'">
+          <img src="somany.png" alt="Somany Tiles" onerror="this.style.display='none'">
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px">
+          <div class="list">
+            <h4 style="margin-bottom:6px">Pumps</h4>
+            <p class="muted">Sales and service for CRI pumps — submersible, monoblock, and domestic pumps. Spare parts and maintenance available.</p>
+          </div>
+          <div class="list">
+            <h4 style="margin-bottom:6px">Pipes & Fittings</h4>
+            <p class="muted">BirlaNu CPVC, PVC & SWR fittings — pipes for plumbing, agriculture and industrial use.</p>
+          </div>
+          <div class="list">
+            <h4 style="margin-bottom:6px">Sanitary & Tiles</h4>
+            <p class="muted">Somany tiles, sinks, bathware & taps. Wide range of ceramic and vitrified tiles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <div>
+          <h3>About Sri Laxmi Engineering Center</h3>
+          <p style="color:var(--muted)">Family-run business established in 1988. We supply pumps, pipes, sanitaryware and tiles to homeowners, contractors and businesses across Medak. Our team helps select the right product and provides after-sales support.</p>
+
+          <h4 style="margin-top:16px">Services</h4>
+          <ul class="items">
+            <li>Product sales & advice</li>
+            <li>Installation guidance</li>
+            <li>Spare parts & minor repairs</li>
+            <li>Quick quotes for projects</li>
+          </ul>
+        </div>
+
+        <aside class="card">
+          <strong>Visit Us</strong>
+          <div style="margin-top:6px;color:var(--muted)">M.G Road, Shivaji Statue, Medak - 502110</div>
+          <div style="margin-top:10px">Phone / WhatsApp:<br><strong>9392079056</strong><br><strong>8919200344</strong></div>
+          <div style="margin-top:12px"><a class="btn" href="https://wa.me/919392079056">Message on WhatsApp</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Request a Quote</h3>
+        <form onsubmit="handleForm(event)" style="max-width:720px;background:white;padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.04)">
+          <label style="display:block;margin-bottom:8px">Name</label>
+          <input id="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px">
+          <label style="display:block;margin-bottom:8px">WhatsApp Number</label>
+          <input id="phone" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px" placeholder="e.g. 9392079056">
+          <label style="display:block;margin-bottom:8px">Message / Requirements</label>
+          <textarea id="msg" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:12px" rows="4"></textarea>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn" type="submit">Send Quote Request</button>
+            <div style="color:var(--muted);font-size:13px">Or message us on WhatsApp</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>SRI LAXMI ENGINEERING CENTER</strong>
+        <div style="margin-top:6px">M.G Road, Shivaji Statue, Medak - 502110</div>
+      </div>
+      <div>
+        <div>Contact</div>
+        <div style="margin-top:6px">WhatsApp: 9392079056 • 8919200344</div>
+      </div>
+      <div style="margin-left:auto">&copy; <span id="year"></span> Sri Laxmi Engineering Center</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <div class="whatsapp">
+    <a href="https://wa.me/919392079056" target="_blank" title="Chat on WhatsApp">WA</a>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleMenu(){alert('On smaller screens you can scroll — menu placeholder');}
+    function handleForm(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const msg=document.getElementById('msg').value.trim();
+      if(!phone || !name){alert('Please enter name and phone');return}
+      // Build WhatsApp message for quick sending
+      const text = encodeURIComponent('Hi, my name is '+name+'\nPhone: '+phone+'\nRequirement: '+msg);
+      window.open('https://wa.me/91'+phone+'?text='+text,'_blank');
+    }
+  </script>
+
+  <!-- IMPORTANT: Replace placeholder image filenames (logo.png, cri.png, birlanu.png, somany.png) with the images you uploaded. Remove or change fonts if you need offline usage. -->
+</body>
+</html>
